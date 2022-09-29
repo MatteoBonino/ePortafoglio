@@ -97,43 +97,32 @@ applicativo accattivante.
 
 <a name="sp3.1"></a>
 ### 3.1 Soggetti
-Client: Università degli Studi di Genova, Città Metropolitana di Genova, Assessore 
-della Cultura
-Regulators: un team dedicato alla verifica del rispetto dei regolamenti universitari 
-vigenti al fine di garantire massima trasparenza e regolarità delle procedure
-Users: studenti e docenti sono in primis coloro che agiranno sul SW; avranno altresì 
-accesso anche il personale universitario, amministrativo e direttivo
+Client: ePortafoglio, in quanto committente del progetto globale.
+Users: Clienti della banca ePortafoglio, Funzionari della banca ePortafoglio
 
 <a name="sp3.2"></a>
 ### 3.2 Requisiti Funzionali
 
 | ID | Descrizione | Priorità |
 | --------------- | ----------- | ---------- | 
-| 0.0 |  Ogni corso deve avere almeno 1 docente e può averne più di 1 |M|
-| 1.0 |  Docente potrà visualizzare i corsi di cui è insegnante  |M|
-| 1.1 |  Docente potrà indire esami, specificando una data, per ogni corso di cui è insegnante |M|
-| 1.2 |  Docente potrà visualizzare la lista degli iscritti ad un esame di cui è insegnante |M|
-| 1.3 |  Docente potrà registrare un voto per ogni studente iscritto all'esame di un corso di cui è insegnante |M|
-| 1.4 |  Docente potrà visualizzare i voti già assegnati agli studenti di un corso di cui è insegnante |M|
-| 1.5 |  Docente potrà cancellare appelli futuri di un corso di cui è insegnante |M|
-| 1.6 |  Docente potrà spostare un appello di un corso di cui è insegnante |M|
-| 1.7 |  Docente non potrà registrare un voto ad un corso di cui è insegnante se è già presente un voto |M|
-| 2.0 |  Studente potrà visualizzare la lista dei corsi a cui è iscritto |M|
-| 2.1 |	 Studente potrà visualizzare la lista dei corsi superati, con il relativo voto |M|
-| 2.2 |  Studente potrà visualizzare la lista degli esami a cui iscriversi |M|
-| 2.3 |  Studente non potrà iscriversi ad un esame superato |M|
-| 3.0 |  Segreteria potrà cambiare il voto ad uno studente |M|
-| 3.1 |  Segreteria può leggere le segnalazioni fatte da docenti e studenti |M|
-| 4.0 |  Studente e Docente possono segnalare eventuali errori |D|
-| 5.0 |  Il Sistema deve permettere di estrarre dei files PDF delle liste |D|
-| 5.1 |  Il Sistema deve permettere di visualizzare lo stato delle operazioni |O|
+| 1.0 |  Per accedere al SW, Cliente deve avere almeno 1 conto bancario ePortafoglio intestato a  sè |M|
+| 1.1 |  Cliente può inviare denaro - nel limite della disponibilità del proprio conto  |M|
+| 1.2 |  Cliente può visualizzare le operazioni svolte sul proprio conto negli ultimi 30 giorni |M|
+| 1.3 |  Cliente può bloccare la propria carta Bancomat (e.g. in caso di furto o smarrimento) |M|
+| 1.4 |  Cliente può effettuare ricariche telefoniche su un numero di telefono a sua scelta |E|
+| 1.5 |  Cliente può creare un file PDF dal registro delle ultime operazioni svolte |E|
+| 2.0 |  Funzionario può creare un nuovo conto e associarlo ad una persona fisica |M|
+| 2.1 |  Funzionario può modificare i dati anagrafici relativi ad un conto esistente |M|
+| 2.3 |  Funzionario può bloccare un conto esistente (e.g. in caso di operazioni sospette o su richiesta del cliente) |M|
+| 2.4 |  Funzionario può chiudere un conto esistente (e.g. su richiesta del cliente) |M|
+| 2.5 |  Funzionario può bloccare la carta Bancomat associata ad un conto esistente (e.g. in caso di operazioni sospette o su richiesta del cliente)  |M|
 
 <a name="sp3.3"></a>
 ### 3.2 Requisiti non funzionali 
  
 | ID | Descrizione | Priorità |
 | --------------- | ----------- | ---------- | 
-| 1.0 | Il SW deve poter gestire un numero di almeno 2000000 utenti in contemporanea |M|
+| 1.0 | Il SW deve poter gestire un numero di almeno 20000000 utenti in contemporanea |M|
 | 1.1 | Il SW deve essere compatibile con PC Windows e PC MacOS |M|
 | 2.1 | Il SW dovrebbe poter essere compatibile con smartphone iOS e Android |D|
 | 3.1 | Il SW dovrebbe essere accessibile a persone ipovedenti |O|
