@@ -60,7 +60,7 @@ Matteo Bonino
 | ID | Nome | Descrizione |
 | ----------- | ----------- | ----------- | 
 | 1 | Login Cliente | Il Cliente accede con credenziali valide al sistema |
-| 2 | Login Funzionario | Il Funzionario accede con credenziali valide al sistema |
+| 2 | Autenticazione | Verifica autenticazione
 | 3 | Inviare denaro | Il Cliente può inviare una somma di denaro ad un altro conto, anche appartenente ad un circuito bancario differente |
 | 4 | Visualizzare Estratto Conto (Cliente) | Il Cliente può vedere le operazioni effettuate sul suo conto negli ultimi 30 giorni |
 | 5 | Visualizzare Estratto Conto (Funzionario) | Il Funzionario può vedere le operazioni effettuate su qualsiasi conto esistente negli ultimi 30 giorni |
@@ -81,7 +81,7 @@ Matteo Bonino
 
 | ID: 1 | <u>Login</u> |
 | ----------- | ----------- | 
-| Attore | Docente, Studente, Amministrazione |
+| Attore | Cliente, Funzionario |
 | Tipo | Primario | 
 | Precondizione | L'utente ha delle credenziali uniche e personali valide per il sistema |
 | Scenario Principale | |
@@ -103,11 +103,11 @@ Matteo Bonino
 | 2. | Il sistema blocca l'account e invia una mail di sblocco all'utente |
 | 3. | Il sistema invita l'utente ad aggiornare la password dalla mail |
 
-<a name ="sp2.1.1"></a>
+<a name ="sp2.2"></a>
 
-| ID: 1.1 | Autenticazione (Opzionale se pre-condizione è semplicemente "avere un certificato valido") |
+| ID: 2 | Autenticazione (Opzionale se pre-condizione è semplicemente "avere un certificato valido") |
 | ----------- | ----------- | 
-| Attore | Docente, Studente, Amministrazione (Principale) |
+| Attore | Cliente, Funzionario |
 | Tipo | Secondario | 
 | Precondizione | |
 | Scenario Principale | |
@@ -118,168 +118,170 @@ Matteo Bonino
 || Scenario Alternativo: Certificato Scaduto |
 || Scenario Alternativo: Certificato Non Valido |
 
-
-<a name="sp2.2"></a>
-
-### 2.2 Consulta Lista Corsi
-
-| ID: 2 | <b>Consulta Lista Corsi</b> |
-| ----------- | ----------- | 
-| Attore | Docente (Principale), Studente (Principale) |
-| Tipo | Primario |
-| Precondizione | L'utente ha un certificato di autenticazione valido; l'utente è autorizzato ad accedere ai corsi |
-| Scenario Principale | |
-| 1. | L'Utente seleziona l'anno scolastico |
-| 2. | Il Sistema riporta i corsi di quell'anno per cui il docente è registrato |
-| 3. | L'Utente clicca sul corso che vuole esaminare |
-| 4. | Il sistema mostra le informazioni identificative del corso |
-| Postcondizione | L'Utente ha accesso alle informazioni del corso specificato |
-
 <a name="sp2.3"></a>
 
-### 2.3 Lista Studenti iscritti al corso
+### 2.3 Inviare Denaro
 
-| ID: 3 | <b>Lista Studenti iscritti al corso </b> |
+| ID: 3 | <b>Inviare Denaro</b> |
 | ----------- | ----------- | 
-| Attore | Docente (Principale), Amministrazione (Principale) |
-| Tipo | Primario | 
-| Precondizione | L'utente ha un certificato di autenticazione valido; Il Docente insegna il corso dell'esame |
-| Scenario Principale | |
-| 1. | Il Docente seleziona il corso |
-| 2. | Il Docente sceglie l'opzione "Mostra Studenti Iscritti" |
-| 3. | Il Sistema fornisce l'elenco degli studenti iscritti al corso |
-| Postcondizione: | Il docente ha accesso alla lista degli studenti iscritti ad un corso |
-
-
-<a name="sp2.4"></a>
-
-### 2.4 Elenco Esami Attivi Corso
-
-| ID: 4 | <b>Elenco Esami Attivi Corso</b> |
-| ----------- | ----------- | 
-| Attore | Docente (Principale) |
-| Tipo | Primario | 
-| Precondizione | L'utente ha un certificato di autenticazione valido; Il Docente insegna il corso dell'esame |
-| Scenario Principale | |
-| 1. | Il Docente selezione il corso |
-| 2. | Il Docente clicca su opzione "Lista Esami Corso" |
-| 3. | Il Sistema mostra la lista degli esami del corso. |
-| Postcondizione: | Il Docente visualizza la lista degli esami attivi |
-
-<a name="sp2.5"></a>
-
-### 2.5 Aggiunta Esame Corso
-
-| ID: 5 | <b>Aggiunta Esame Corso</b> |
-| ----------- | ----------- | 
-| Attore | Docente (Principale) |
-| Tipo | Primario | 
-| Precondizione | L'utente ha un certificato di autenticazione valido; Il Docente insegna il corso dell'esame |
-| Scenario Principale | |
-| 1. | L'utente visualizza la lista esami del corso |
-| 2. | L'utense sceglie l'opzione "Aggiungi Esame" |
-| 3. | L'utente inserisce la data/le date dell'appello |
-| 4. | L'utente salva le informazioni |
-| 5. | Il Sistema notifica la creazione dell'appello |
-| 6. | Il Sistema invia una mail a tutti gli iscritti al corso |
-| Postcondizione: | L'esame per il corso è stato creato |
-
-
-<a name="sp2.6"></a>
-
-### 2.6 Consulta Corsi superati con relativa votazione
-
-| ID: 6 |<b>Consulta Corsi superati con relativa votazione</b>|
-| ---------- | ------------|
-| Attore | Studente (Principale) |
-| Tipo | Primario |
-| Precondizione |L'utente ha un certificato di autenticazione valido; Lo studente è iscritto all'università |
-| Scenario principale | |
-| 1. | L'utente visualizza la lista dei corsi |
-| 2. | L'utense sceglie l'opzione "Visualizza corsi superati" |
-| 3. | L'utense sceglie l'opzione "Visualizza votazione" del corso desiderato |
-| Postcondizione: | Lo studente visualizza la lista dei corsi superati |
-
-<a name="sp2.7"></a>
-
-### 2.7 Consulta Esami a cui è iscritto
-
-| ID: 7 |<b>Consulta Esami a cui è iscritto</b> |
-| ---------- | ------------|
-| Attore | Studente (Principale)|
-| Tipo | Primario|
-| Precondizione | L'utente ha un certificato di autenticazione valido; l'utente è autorizzato ad accedere ai corsi |
-| Scenario Principale | |
-| 1. | L'Utente seleziona l'anno scolastico |
-| 2. | Il Sistema riporta gli esami di quell'anno per cui lo studente è iscritto |
-| 3. | L'Utente clicca sull'esame che vuole esaminare |
-| 4. | Il sistema mostra le informazioni identificative dell'esame |
-| Postcondizione | L'Utente ha accesso alle informazioni dell'esame specificato |
-
-<a name="sp2.8"></a>
-
-### 2.8 Iscrizione Esami
-
-| ID: 8 |<b>Iscrizione Esami</b> |
-| ---------- | ------------|
-| Attore | Studente (Principale)|
-| Tipo | Primario|
-| Precondizione | L'utente ha un certificato di autenticazione valido; Lo stuente è iscritto al corso dell'esame |
-| Scenario Principale | |
-| 1. | L'utente visualizza la lista esami del corso |
-| 2. | L'utense sceglie l'opzione "Aggiungi Esame" |
-| 4. | L'utente visualizza la data/le date dell'appello |
-| 5. | L'utente conferma l'iscrizione |
-| 6. | Il Sistema notifica all'utente l'iscrizione all'appello |
-| 6. | Il Sistema invia una mail al docente del corso |
-| Postcondizione: | Lo studente è iscritto all'esame |
-
-<a name="sp2.9"></a>
-
-### 2.9 Rimuovere iscrizione ad un Esame
-
-|ID: 9 |<b>Rimuovere iscrizione ad un Esame</b> |
-| ---------- | ------------|
-| Attore | Studente (Principale) |
-| Tipo | Primario|
-| Preconzione | L'utente ha un certificato di autenticazione valido; Lo studente è iscritto al corso dell'esame |
-| Scenario Principale | |
-| 1. | L'utente visualizza la lista esami del corso |
-| 2. | L'utense sceglie l'opzione "Visualizza Esame" |
-| 3. | L'utente sceglie l'opzione "Rimuovi Esame" |
-| 5. | L'utente conferma la disiscrizione |
-| 6. | Il Sistema notifica l'iscrizione all'appello |
-| 6. | Il Sistema invia una mail al docente del corso |
-| Postcondizione: | Lo studente ha rimosso l'iscritto all'esame |
-
-<a name="sp2.10"></a>
-
-### 2.10 Informazioni Account
-
-| ID: 10 |<b>Informazioni Account</b> |
-| ---------- | ------------|
-| Attore | Studente (Principale), Docente(Principale) |
-| Tipo | Primario|
-| Precondizione | L'utente ha un certificato di autenticazione valido; l'utente è iscritto all'università |
-| Scenario Principale | |
-| 1. | L'utente sceglie l'opzione "visualizza account" |
-| 2. | L'utente può consultare le sue informazioni |
-| 3. | L'utente può modificare o lasciarle invariate |
-| 5. | L'utente salva le informazioni |
-| Postcondizione | Lo studente verifica le informazioni di account|
-
-<a name="sp2.11"></a>
-
-### 2.11 Creazione dipartimenti
-| ID: 11|<b>Creazione dipartimenti</b> |
-| ---------- | ------------|
-| Attore | Amministratore (Principale) |
+| Attore | Cliente |
 | Tipo | Primario |
 | Precondizione | L'utente ha un certificato di autenticazione valido |
 | Scenario Principale | |
-|1. | L'utente sceglie il modello Dipartimento |
-|2. | L'utente per ogni Dipartimento istanzia i relativi Oggetti |
-|3. | L'utente salva tutte le informazioni inserite |
-|4. | L'utente verifica che i Dipartimenti creati corrispondano a quelli delle direttive di Ateneo |
-| Postcondizione | L'utente ha creato un nuovo dipartimento |
+| 1. | L'Utente seleziona un importo |
+| 2. | L'Utente inserisce un iban destinario |
+| 3. | L'Utente inserisce informazioni accessorie |
+| 4. | L'Utente conferma di voler eseguire l'operazione e che i dati siano corretti|
+| Postcondizione | Sistema restituisce una schermata coi dati riepilogativi dell'operazione |
+| 2a.| Scenario Alternativo: i dati inseriti non sono corretti |
+| 1. | Sistema notifica che non ha trovato nessun Iban sul sistema bancario mondiale corrispondente a quello inserito |
+| 2. | Sistema restituisce una schermata "Operazione non effettuata, il denaro non è stato inviato" |
+
+<a name="sp2.4"></a>
+
+### 2.4 Visualizzare Estratto Conto (Cliente)
+
+| ID: 4 | <b>Visualizzare Estratto Conto (Cliente)</b> |
+| ----------- | ----------- | 
+| Attore | Cliente (Principale) |
+| Tipo | Primario | 
+| Precondizione | L'utente ha un certificato di autenticazione valido |
+| Scenario Principale | |
+| 1. | L'Utente clicca sull'opzione "Visualizza lista movimenti degli ultimi 30 giorni" |
+| Postcondizione: | Sistema restituisce una schermata contenente la lista di movimenti effettuati su quel conto negli ultimi 30 giorni |
+| 1a. | Scenario alternativo: non sono stati effettuati movimenti negli ultimi 30 giorni" |
+| 1. | Sistema notifica che non sono stati fatti movimenti sul conto negli ultimi 30 giorni |
+
+
+<a name ="sp2.5"></a>
+
+### 2.5 Visualizzare Estratto Conto (Funzionario)
+
+| ID: 5 | <b>Visualizzare Estratto Conto (Funzionario)</b> |
+| ----------- | ----------- | 
+| Attore | Cliente (Principale) |
+| Tipo | Primario | 
+| Precondizione | L'utente ha un certificato di autenticazione valido |
+| Scenario Principale | |
+| 1. | L'Utente clicca sull'opzione "Visualizza lista movimenti degli ultimi 30 giorni" |
+| 2. | Sistema chiede di inserire un codice iban |
+| 3. | L'Utente inserisce un codice iban |
+| Postcondizione: | Sistema restituisce una schermata contenente la lista di movimenti effettuati su quel conto negli ultimi 30 giorni |
+| 3a. | Scenario alternativo: non sono stati effettuati movimenti negli ultimi 30 giorni" |
+| 1. | Sistema notifica che non sono stati fatti movimenti sul conto negli ultimi 30 giorni |
+| 3b. | Scenario alternativo: l'iban inserito è errato o non presente sul database interno della banca stessa |
+| 1. | Sistema notifica che non è stato trovato l'iban inserito |
+
+<a name ="sp2.6"></a>
+
+### 2.6 Bloccare Bancomat (Cliente)
+
+| ID: 6 | <b>Bloccare Bancomat (Cliente)</b> |
+| ----------- | ----------- | 
+| Attore | Cliente (Principale) |
+| Tipo | Primario | 
+| Precondizione | L'utente ha un certificato di autenticazione valido |
+| Scenario Principale | |
+| 1. | L'Utente clicca sull'opzione "Blocca Carta Bancomat" |
+| 2. | Sistema chiede "Sei sicuro di voler procedere?" |
+| 3. | L'Utente clicca "Si" |
+| 4. | Sistema chiede di inserire di nuovo le credenziali (per motivi di sicurezza) |
+| 5. | L'Utente inserisce le credenziali |
+| Postcondizione: | Sistema restituisce una schermata confermando il blocco della carta Bancomat e le istruzioni per richiedere lo sblocco |
+| 1a. | Scenario alternativo: nessuna carta Bancomat è associata al conto del cliente |
+| 1. | Sistema notifica che non risulta nessuna carta Bancomat associata al conto del cliente|
+| 5a. | Scenario alternativo: le credenziali inserite sono errate |
+| 1. | Sistema concede 3 tentativi, superati i quali il conto viene bloccato in automatico per motivi di sicurezza, notificando il cliente attraverso email e sms, |
+
+<a name ="sp2.7"></a>
+
+### 2.7 Bloccare Bancomat (Funzionario)
+
+| ID: 7 | <b>Bloccare Bancomat (Funzionario)</b> |
+| ----------- | ----------- | 
+| Attore | Funzionario (Principale) |
+| Tipo | Primario | 
+| Precondizione | L'utente ha un certificato di autenticazione valido |
+| Scenario Principale | |
+| 1. | L'Utente clicca sull'opzione "Blocca Carta Bancomat" |
+| 2. | Sistema chiede di inserire un iban |
+| 3. | L'Utente inserisce un codice iban |
+| 4. | Sistema chiede "Sei sicuro di voler procedere?" |
+| 5. | L'Utente clicca "Si" |
+| Postcondizione: | Sistema restituisce una schermata confermando il blocco della carta Bancomat |
+| 4a. | Scenario alternativo: nessuna carta Bancomat è associata al conto del cliente |
+| 1. | Sistema notifica che non risulta nessuna carta Bancomat associata al conto del cliente|
+| 4b. | Scenario alternativo: il codice iban non esiste o non appartiene al circuito interno della banca stessa |
+| 1. | Sistema notifica che il codice iban non risulta nel database interno della banca stessa |
+
+<a name="sp2.8"></a>
+
+### 2.8 Creare nuovo conto
+
+| ID: 8 | <b>Creare nuovo conto</b> |
+| ----------- | ----------- | 
+| Attore | Funzionario (Principale) |
+| Tipo | Primario | 
+| Precondizione | L'utente ha un certificato di autenticazione valido |
+| Scenario Principale | |
+| 1. | L'utente seleziona l'opzione "Crea nuovo conto" |
+| 2. | L'utente compila un'insieme di campi inserendo i dati anagrafici della persona fisica |
+| 3. | Sistema chiede conferma nel procedere alla creazione |
+| 4. | L'utente clicca conferma |
+| Postcondizione: | Sistema crea un conto a cui associa un Iban libero (ossia non utilizzato da nessun conto nel sistema bancario mondiale) | |
+
+
+<a name="sp2.9"></a>
+
+### 2.9 Modificare dati anagrafici di un conto
+
+| ID: 9 |<b>Modificare dati anagrafici di un conto</b>|
+| ---------- | ------------|
+| Attore | Funzionario (Principale) |
+| Tipo | Primario |
+| Precondizione |L'utente ha un certificato di autenticazione valido |
+| Scenario principale | |
+| 1. | L'utente seleziona l'opzione "Modifica dati anagrafici" |
+| 2. | Sistema chiede di inserire un codice iban appartenente al circuito bancario interno della banca stessa |
+| 3. | L'utente inserisce un codice iban |
+| 4. | Sistema restituisce la schermata riepilogativa con i dati anagrafici modificabili |
+| 5. | L'utente modifica i campi che desidera modificare, dopodiché clicca "Salva modifiche" |
+| Postcondizione: | Sistema restituisce il messaggio "Modifiche salvate con successo" |
+| 3a. | Scenario alternativo: il codice iban non esiste o non appartiene al circuito interno della banca stessa |
+| 1. | Sistema notifica che il codice iban non risulta nel database interno della banca stessa |
+
+<a name="sp2.10"></a>
+
+### 2.10 Bloccare un conto 
+
+| ID: 10 |<b>Bloccare un conto</b>|
+| ---------- | ------------|
+| Attore | Funzionario (Principale) |
+| Tipo | Primario |
+| Precondizione |L'utente ha un certificato di autenticazione valido |
+| Scenario principale | |
+| 1. | L'utente seleziona l'opzione "Blocca un conto" |
+| 2. | Sistema chiede di inserire un codice iban appartenente al circuito bancario interno della banca stessa |
+| 3. | L'utente inserisce un codice iban |
+| Postcondizione: | Sistema restituisce il messaggio "Conto bloccato con successo" |
+| 3a. | Scenario alternativo: il codice iban non esiste o non appartiene al circuito interno della banca stessa |
+| 1. | Sistema notifica che il codice iban non risulta nel database interno della banca stessa |
+
+
+<a name="sp2.11"></a>
+
+### 2.11 Chiudere un conto
+
+| ID: 11 |<b>Chiudere un conto</b>|
+| ---------- | ------------|
+| Attore | Funzionario (Principale) |
+| Tipo | Primario |
+| Precondizione |L'utente ha un certificato di autenticazione valido |
+| Scenario principale | |
+| 1. | L'utente seleziona l'opzione "Chiudi un conto" |
+| 2. | Sistema chiede di inserire un codice iban appartenente al circuito bancario interno della banca stessa |
+| 3. | L'utente inserisce un codice iban |
+| Postcondizione: | Sistema restituisce il messaggio "Conto chiuso con successo" |
+| 3a. | Scenario alternativo: il codice iban non esiste o non appartiene al circuito interno della banca stessa |
+| 1. | Sistema notifica che il codice iban non risulta nel database interno della banca stessa |
 
