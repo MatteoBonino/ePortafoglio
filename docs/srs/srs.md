@@ -23,16 +23,15 @@ Matteo Bonino
 
 	1. [Login](#sp2.1)
 	2. [Autenticazione](#sp2.2)
-	3. [Consulta Lista Corsi](#sp2.3)
-	4. [Lista Studenti iscritti al corso](#sp2.4)
-	5. [Elenco Esami Attivi Corso](#sp2.5)
-	6. [Aggiunta Esame Corso](#sp2.6)
-	7. [Consulta Lista Corsi superati con relativa votazione](#sp2.7)
-	8. [Consulta Lista Esami a cui è iscritto](#sp2.8)
-	9. [Iscrizione Esami](#sp2.9)
-	10. [Rimuovere iscrizione ad un Esame](#sp2.10)
-	11. [Informazioni Account](#sp2.11)
-	12. [Creazione dei dipartimenti](#sp2.12)
+	3. [Inviare Denaro](#sp2.3)
+	4. [Visualizza estratto conto (Cliente)](#sp2.4)
+	5. [Visualizza estratto conto (Funzionario)](#sp2.5)
+	6. [Bloccare Bancomat (Cliente)](#sp2.6)
+	7. [Bloccare Bancomat (Funzionario)](#sp2.7)
+	8. [Creare un nuovo conto](#sp2.8)
+	9. [Modifica dati anagrafici](#sp2.9)
+	10. [Bloccare un conto](#sp2.10)
+	11. [Chiudere un conto](#sp2.11)
 
 <a name="p1"></a>
 
