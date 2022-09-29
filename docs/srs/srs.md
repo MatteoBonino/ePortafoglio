@@ -104,6 +104,8 @@ Matteo Bonino
 
 <a name ="sp2.2"></a>
 
+### 2.2 Autenticazione
+
 | ID: 2 | Autenticazione (Opzionale se pre-condizione è semplicemente "avere un certificato valido") |
 | ----------- | ----------- | 
 | Attore | Cliente, Funzionario |
