@@ -38,7 +38,9 @@ e codici univoci.
 
 ### 1.1 Obbiettivi del Documento
 Lo scopo  di questo documento è quello di illustrare ogni aspetto del sistema, presentare 
-le sue features, nonché essere anche una guida introduttiva sul suo funzionamento.
+le sue features, nonché essere anche una guida introduttiva sul suo funzionamento. 
+Il documento descriverà i potenziali utenti e i casi d'uso, sia attraverso descrizioni
+a parole, sia con l'utilizzo di Diagrammi di Classi e Diagrammi di Sequenza.
 
 <a name="sp1.2"></a>
 
@@ -55,35 +57,32 @@ le sue features, nonché essere anche una guida introduttiva sul suo funzionamen
 
 ### 1.3 Riferimenti 
 
-Fare riferimento al documento esame.pdf presente nel repository
+Fare riferimento al documento esame.pdf presente nel repository, cartella main\docs\ref
 
 <a name="p2"></a>
 
 ## 2. Descrizione Del Sistema 
 <a name="sp2.15"></a>
-Il SW può essere essenzialmente definito come un Gestionale: esso permette a studenti e 
-docenti di visualizzare e agire sugli esami universitari - in maniera appropriata in base 
-al tipo di utente. Attraverso una GUI, l'utente potrà effettuare diverse operazioni 
-online senza la necessità di presentarsi personalmente all'Università.
+Il SW è un applicativo di home banking, con una interfaccia grafica user-friendly, che permette
+all'utilizzatore di eseguire le classiche operazioni sul proprio conto: invio di denaro, 
+ricezione di denaro, verifica delle ultime operazioni effettuate (estratto conto).
 
 ### 2.1 Contenuti e Motivazioni
-Il contesto di utilizzo previsto è nell'ambito dell'istruzione: per come il SW è progettato
-può essere applicabile ad altre tipologie di istituti scolastici.
-Il SW ha lo scopo di ridurre le tempistiche e i costi dovuti all'attuale sistema in uso 
-presso l'Università di Genova, che prevede la compilazione di moduli cartacei, richiedendo
-quindi la presenza di personale ad hoc per la compilazione e la successiva comunicazione 
-tra studente e docente.
-Permettere la fruizione dei servizi anche a distanza, in particolare per venire incontro
-a studenti fuori sede, con disabilità motorie, e per ridurre i contatti fisici in seguito 
-alla pandemia CoVid 19.
+Attualmente l'azienda ePortafoglio non ha un servizio di HB, i suoi clienti possono effettuare
+le operazioni sui propri conti personali soltanto attraverso l'utilizzo di un terminale ATM 
+presente all'esterno delle sedi fisiche della Banca o attraverso lo sportello della Banca stessa.
+Per venire incontro alle esigenze del cliente e per raggiungere i relativi competitors del settore,
+ePortafoglio ha quindi commissionato la realizzazione di questo applicativo.
 
 <a name="sp2.2"></a>
 
 ### 2.2 Obbiettivi del Progetto 
-Realizzare un SW che sia in grado di funzionare sulla maggior parte delle piattaforme in 
-uso: PC Windows, PC MacOS, smartphone iOS e Android. 
-Realizzazione di un'ambiente di sistema che permetta di non avere ridondanza di dati e 
-che abbia requisiti hardware minimi molto accessibili.
+Nell'immediato: realizzare un SW che sia in grado di funzionare sulla maggior parte delle piattaforme in 
+uso: PC Windows, PC MacOS, smartphone iOS e Android; creare un'ambiente di sistema che permetta di non 
+avere ridondanza di dati e che abbia requisiti hardware minimi molto accessibili.
+Sul lungo termine: invogliare i clienti ad effettuare più operazioni, in modo tale da aumentare i 
+guadagni dell'azienda ePortafoglio tramite le commissioni; attirare nuovi clienti offrendo un
+applicativo accattivante.
 
 <a name="p3"></a>
 
