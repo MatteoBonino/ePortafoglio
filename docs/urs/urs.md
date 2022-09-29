@@ -32,7 +32,7 @@ Matteo Bonino
 
 <a name="sp1.1"></a>
 Su commissione dell'azienda ePortafoglio, siamo qui a realizzare un sistema di home banking
-- nome provvisorio "BancApp" - che permetta ai clienti di poter eseguire diverse operazioni 
+(nome provvisorio "BancApp") che permetta ai clienti di poter eseguire diverse operazioni 
 sul proprio conto bancario, garantendo massima sicurezza tramite l'utilizzo di credenziali 
 e codici univoci.
 
